@@ -1,0 +1,51 @@
+@font-face {
+	font-family: 'EuclidCircularA';
+	src: url('https://uploads-ssl.webflow.com/608a9e494bc037772ce9de86/608aa0a8464c53afc8bb1dc4_EuclidCircularA-Light.otf')
+		format('opentype');
+	font-weight: 300;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'EuclidCircularA';
+	src: url('https://uploads-ssl.webflow.com/608a9e494bc037772ce9de86/608aa0a85ecbe2065ef7d944_EuclidCircularA-Medium.otf')
+		format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'EuclidCircularA';
+	src: url('https://uploads-ssl.webflow.com/608a9e494bc037772ce9de86/608aa0a80ddc74754d30f6f2_EuclidCircularA-Regular.otf')
+		format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'EuclidCircularA', sans-serif;
+}
+
+::-webkit-scrollbar {
+	width: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: #131313;
+} 
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #888;
+	border-radius: 5px;
+	padding: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #555;
+}
