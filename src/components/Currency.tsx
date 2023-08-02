@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 
-type Props = {};
-
-const Currency = (props: Props) => {
+const Currency = () => {
     const [labels, setLabels] = useState<string[]>([]);
     const [newLabel, setNewLabel] = useState<string>('');
 

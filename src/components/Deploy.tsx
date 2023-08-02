@@ -1,10 +1,12 @@
 import React from 'react'
 
-type Props = {}
-
 const Deploy = ({ formData }) => {
   return (
-    <div>Deploy</div>
+    <div className="w-5/6 mx-auto py-10">
+      <div className="flex flex-wrap p-4 mb-8 w-full">
+        Deploy
+      </div>
+    </div>
   )
 }
 

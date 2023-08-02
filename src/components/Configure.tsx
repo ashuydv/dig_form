@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Dropdown from './Dropdown1';
 import Select from './Select';
 
-const Configure = ({ formData, setFormData }) => {
+const Configure = ({ handleTabClick, formData, setFormData }) => {
 
     const { title = '', description = '', image = '', customURL = '', fields = [], hideFromSearchEnginer = false, automaticSave = false, reqCaptcha = false, incentive = '', submissionLimit = 0, noOfResponses = 0 } = formData || {};
 

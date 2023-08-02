@@ -31,7 +31,7 @@ const QuestionCard = ({ onCopy, onDelete, questionId, question, onQuestionChange
 
     const handleFileChange = (file: File | null) => {
         console.log(file);
-    }
+    } 
 
     const questionTypes = [
         {

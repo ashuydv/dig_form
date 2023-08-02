@@ -18,7 +18,10 @@ type Props = {
 const responseComponents: { [key: string]: React.ReactNode } = {
     'Short Answer': <ShortAnswer />,
     'Long Answer': <LongAnswer />,
-    'Multiple Choice': <MultipleChoice />,
+    'Multiple Choice': <MultipleChoice
+        options={['Option 1', 'Option 2', 'Option 3']}
+        setOptions={(options) => console.log(options)}
+    />,
     'Checkboxes': <Checkboxes />,
     'File Upload': <FileUpload
         onFileChange={(file: any) => {
@@ -38,8 +41,12 @@ const ResponseCard = ({ field: { question, questionType, options, required } }: 
                             {question}
                             <span>{required ? '*' : ''}</span>
                         </h4>
-                        <p>{questionType}</p>
-                        <div>{responseComponents[questionType]}</div>
+                        <p>{
+                            questionType
+                        }</p>
+                        <div
+                            className='mt-[10px]'
+                        >{responseComponents[questionType]}</div>
                     </div>
                     <div className="flex flex-wrap">
                         {options &&

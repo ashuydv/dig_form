@@ -7,10 +7,14 @@ type Tab = {
 
 type Props = {
     tabs: Tab[];
+    activeTab: number;
+    handleTabClick: (index: number) => void;
 };
 
-const Tabs: React.FC<Props> = ({ tabs }) => {
-    const [activeTab, setActiveTab] = useState(0);
+const Tabs: React.FC<Props> = ({ tabs,
+    activeTab,
+    handleTabClick
+}) => {
 
     return (
         <div>
@@ -21,7 +25,7 @@ const Tabs: React.FC<Props> = ({ tabs }) => {
                         key={index}
                         className={` px-4 py-2 mb-4 border-2 border-black rounded-[4px] ${activeTab === index ? 'bg-[#fff]' : 'bg-[#EAEAEA]'}
                     `}
-                        onClick={() => setActiveTab(index)}
+                        onClick={() => handleTabClick(index)}
                     >
                         {tab.label}
                     </button>
@@ -29,7 +33,9 @@ const Tabs: React.FC<Props> = ({ tabs }) => {
             </div>
 
             {/* Tab content */}
-            <div className="w-5/6 mx-auto">{tabs[activeTab].content}</div>
+            <div className="w-5/6 mx-auto">
+                {tabs[activeTab].content}
+            </div>
         </div>
     );
 };

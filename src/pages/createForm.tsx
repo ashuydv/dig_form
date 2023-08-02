@@ -1,5 +1,5 @@
 import Layout from '@/components/Layout/Layout'
-import React from 'react'
+import React, { useState } from 'react'
 import Tabs from '@/components/Tabs'
 import Design from '@/components/Design'
 import Configure from '@/components/Configure'
@@ -23,15 +23,23 @@ const createForm = () => {
         noOfResponses: 0,
     })
 
+    const [activeTab, setActiveTab] = useState(0);
+
+    const handleTabClick = (index: any) => {
+        setActiveTab(index);
+    }
+
     const tabs = [{
         label: 'Design',
         content: <Design
+            handleTabClick={handleTabClick}
             formData={formData}
             setFormData={setFormData}
         />
     }, {
         label: 'Configure',
         content: <Configure
+            handleTabClick={handleTabClick}
             formData={formData}
             setFormData={setFormData}
         />
@@ -64,7 +72,10 @@ const createForm = () => {
                     </span> Back to Dashboard
                 </a>
             </Link>
-            <Tabs tabs={tabs} />
+            <Tabs tabs={tabs}
+                activeTab={activeTab}
+                handleTabClick={handleTabClick}
+            />
         </Layout>
     )
 }

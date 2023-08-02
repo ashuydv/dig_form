@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Layout from '@/components/Layout/Layout';
 import ResponseCard from '@/components/ResponseCard';
+import Link from 'next/link';   
 
 const FormId = () => {
     const router = useRouter();
@@ -26,8 +27,11 @@ const FormId = () => {
 
     return (
         <Layout>
-            <div className="w-5/6 mx-auto">
-                <div className="flex flex-wrap p-4 mb-20 w-full">
+            <Link href="/datarequest">
+                <a className=' underline underline-offset-8'>Back to Home</a>
+            </Link>
+            <div className="w-5/6 mx-auto py-10">
+                <div className="flex flex-wrap p-4 mb-8 w-full">
                     <div className="lg:w-1/3 w-full mb-6 lg:mb-0">
                         <h4 className="text-2xl font-medium mb-2 text-[#131313]">
                             {formData?.title}

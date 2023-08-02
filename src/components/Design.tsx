@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import QuestionCard from './QuestionCard';
 
-const Design = ({ formData, setFormData }) => {
+const Design = ({ handleTabClick, formData, setFormData }) => {
     const [questions, setQuestions] = useState([]);
 
     useEffect(() => {
@@ -34,7 +34,7 @@ const Design = ({ formData, setFormData }) => {
         });
     };
 
-    const handleQuestionChange = (index, field, value) => {
+    const handleQuestionChange = (index: number, field: string, value: any) => {
         setQuestions((prevQuestions) => {
             const updatedQuestions = prevQuestions.map((question, i) => {
                 if (i === index) {
@@ -65,12 +65,12 @@ const Design = ({ formData, setFormData }) => {
             })),
         };
         console.log('Form data saved:', updatedFormData);
-
         setFormData(updatedFormData);
+        handleTabClick(1);
     };
 
     return (
-        <div>
+        <div className='pb-10'>
             {questions.map((question, index) => (
                 <QuestionCard
                     key={question.questionId}
