@@ -82,8 +82,8 @@ const Design = ({ formData, setFormData }) => {
                     onQuestionTypeChange={(value: any) => handleQuestionTypeChange(index, value)}
                 />
             ))}
-            <div className="flex items-center">
-                <button onClick={handleAddQuestion}>Add Question</button>
+            <div className="flex items-center justify-center">
+                <button onClick={handleAddQuestion}>Add Questions</button>
                 <button onClick={handleSave}>Save</button>
             </div>
         </div>

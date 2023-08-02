@@ -42,7 +42,7 @@ const DataRequest = () => {
             </Link>
 
             {loading ? (
-                <div 
+                <div
                     className='my-8'
                 >
                     <Loading
@@ -53,7 +53,7 @@ const DataRequest = () => {
             ) : (
                 <div className="flex items-center justify-evenly flex-wrap -m-4 my-2">
                     {
-                        data.map((item) => ( 
+                        data.map((item) => (
                             <div
                                 className='p-4 md:w-1/4 max-h-[220px]'
                                 key={item.id}

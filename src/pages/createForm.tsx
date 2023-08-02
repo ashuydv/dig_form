@@ -11,7 +11,7 @@ const createForm = () => {
     const [formData, setFormData] = React.useState({
         title: '',
         description: '',
-        image:'',
+        image: '',
         customURL: '',
         fields: [],
         hideFromSearchEnginer: false,
@@ -42,7 +42,7 @@ const createForm = () => {
         />
     }, {
         label: 'Share',
-        content: <Share 
+        content: <Share
             formData={formData}
         />
     }]
@@ -54,10 +54,14 @@ const createForm = () => {
                 as="/datarequest"
                 className='text-[#131313] underline'
             >
-                <a
-                    className='text-[#131313] underline mb-5'
-                >
-                    Back to Dashboard
+                <a className='text-[#131313] underline flex items-center'>
+                    <span
+                        className='inline-flex'
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4 mr-1">
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M18.75 19.5l-7.5-7.5 7.5-7.5m-6 15L5.25 12l7.5-7.5" />
+                        </svg>
+                    </span> Back to Dashboard
                 </a>
             </Link>
             <Tabs tabs={tabs} />

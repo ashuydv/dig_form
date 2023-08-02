@@ -54,9 +54,6 @@ const QuestionType: React.FC<QuestionTypeProps> = ({ questionType, setQuestionTy
           ))}
         </Listbox.Options>
       </Listbox>
-      <Suspense fallback={<div>Loading...</div>}>
-        <QuestionComponent />
-      </Suspense>
     </div>
   );
 };
