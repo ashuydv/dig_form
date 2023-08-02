@@ -1,6 +1,5 @@
 import { Switch } from '@nextui-org/react';
 import React, { useState } from 'react'
-import Dropdown from './Dropdown1';
 import Select from './Select';
 
 const Configure = ({ handleTabClick, formData, setFormData }) => {

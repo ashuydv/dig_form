@@ -1,8 +1,6 @@
 import React from 'react'
 
-type Props = {}
-
-const Checkboxes = (props: Props) => {
+const Checkboxes = () => {
   return (
     <div>Checkboxes</div>
   )

@@ -3,10 +3,7 @@ import Dropdown from '../Dropdown1'
 import sidebarLinks from '../sidebarLink'
 import Link from 'next/link'
 
-type Props = {
-}
-
-const Sidebar = (props: Props) => {
+const Sidebar = () => {
     return (
         <div
             className="flex flex-col w-72 bg-[#131313] text-white px-4 py-5 overflow-hidden overflow-y-scroll"

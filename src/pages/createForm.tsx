@@ -8,7 +8,7 @@ import Share from '@/components/Share'
 import Link from 'next/link'
 
 const createForm = () => {
-    const [formData, setFormData] = React.useState({
+    const [formData, setFormData] = useState({
         title: '',
         description: '',
         image: '',

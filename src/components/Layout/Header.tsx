@@ -3,11 +3,8 @@ import ThemeSwitcher from '../ThemeSwitcher'
 import ConnectWallet from '../ConnectWallet'
 import Notifications from '../Notifications'
 import GetVerified from '../GetVerified'
-import Network from '../Network'
 
-type Props = {}
-
-const Header = (props: Props) => {
+const Header = () => {
     return (
         <div className='flex items-center justify-end sticky top-0'>
             <GetVerified />
