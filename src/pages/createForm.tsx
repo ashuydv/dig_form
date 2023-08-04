@@ -7,7 +7,7 @@ import Deploy from '@/components/Deploy'
 import Share from '@/components/Share'
 import Link from 'next/link'
 
-const createForm = () => {
+const CreateForm = () => {
     const [formData, setFormData] = useState({
         title: '',
         description: '',
@@ -80,4 +80,4 @@ const createForm = () => {
     )
 }
 
-export default createForm
+export default CreateForm

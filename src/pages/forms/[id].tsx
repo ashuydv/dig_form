@@ -28,7 +28,7 @@ const FormId = () => {
     return (
         <Layout>
             <Link href="/datarequest">
-                <a className=' underline underline-offset-8'>Back to Home</a>
+                <a className=' text-black underline underline-offset-8'>Back to Home</a>
             </Link>
             <div className="w-5/6 mx-auto py-10">
                 <div className="flex flex-wrap p-4 mb-8 w-full">
@@ -54,6 +54,7 @@ const FormId = () => {
                     onClick={() => {
                         console.log('Form submitted!');
                     }}
+                    className='text-black'
                 >
                     Save Response
                 </button>

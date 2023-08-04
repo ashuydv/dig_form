@@ -1,6 +1,7 @@
 import { Switch } from '@nextui-org/react';
 import React, { useState } from 'react'
 import Select from './Select';
+import Image from 'next/image';
 
 const Configure = ({ handleTabClick, formData, setFormData }) => {
 
@@ -67,7 +68,11 @@ const Configure = ({ handleTabClick, formData, setFormData }) => {
                 <div className="w-1/2">
                     <div className="bg-[#fff] max-w-1/2 min-h-[400px] border border-[#00000033] relative mb-3 overflow-hidden rounded-[8px]">
                         <div className='absolute w-full h-full object-center object-cover rounded-[4px]'>
-                            <img src={image} alt="" />
+                            <Image
+                                layout='fill'
+                                width={400}
+                                height={400}
+                                src={image} alt="" />
                         </div>
                         <div className="absolute bottom-[15px] right-[10px]"><button type="button" className="bg-[#EAEAEA] text-[#131313e5] rounded-[4px] px-[12px] py-[8px] mr-2">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">

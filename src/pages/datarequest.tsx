@@ -68,7 +68,7 @@ const DataRequest = () => {
                                                 <h1 className='title-font text-lg font-medium text-gray-900 mb-3'>
                                                     {item.title}
                                                 </h1>
-                                                <p className='leading-relaxed mb-3'>
+                                                <p className='leading-relaxed mb-3 text-black'>
                                                     {item.description.slice(0, 120)}
                                                 </p>
                                             </div>
@@ -77,11 +77,14 @@ const DataRequest = () => {
                                                     href={`forms/${item._id}`}
                                                     onClick={() =>
                                                         window.open(`forms/${item._id}`, "_blank")
-                                                    }
-                                                    className='text-black inline-flex items-center text-sm md:mb-2 lg:mb-0'>
-                                                    Learn More
+                                                    }>
+                                                    <a
+                                                        className="text-[#131313] border-0 rounded text-lg"
+                                                    >
+                                                        Learn More
+                                                    </a>
                                                 </Link>
-                                                <span className='mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-400'>
+                                                <span className='mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-400 text-black'>
                                                     <svg
                                                         className='w-4 h-4 mr-1'
                                                         stroke='currentColor'
@@ -96,7 +99,7 @@ const DataRequest = () => {
                                                     </svg>
                                                     1.2K
                                                 </span>
-                                                <span className='inline-flex items-center leading-none text-sm'>
+                                                <span className='inline-flex items-center leading-none text-sm text-black'>
                                                     <svg
                                                         className='w-4 h-4 mr-1'
                                                         stroke='currentColor'
